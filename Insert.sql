@@ -1,19 +1,3 @@
-SELECT * FROM Genre
-
-SELECT * FROM Executor
-
-SELECT * FROM Album
-
-SELECT * FROM Track
-
-SELECT * FROM Collection
-
-SELECT * FROM executor_album
-
-SELECT * FROM executor_genre
-
-SELECT * FROM track_collection
-
 INSERT INTO Genre (genre_name)
 VALUES ('Рок');
 
@@ -74,6 +58,9 @@ VALUES ('Дело нескольких минут', TIME '0:05:50', 3);
 INSERT INTO Track (track_name, duration, album)
 VALUES ('But Beautiful', TIME '0:04:50', 5);
 
+INSERT INTO Track (track_name, duration, album)
+VALUES ('Everyday', TIME '0:03:00', 4);
+
 
 INSERT INTO Collection (collection_name, year_of_release)
 VALUES ('Русский реп', DATE '2019-12-20');
@@ -95,4 +82,4 @@ INSERT INTO executor_album (executor, album)
 VALUES (1, 5), (2,1), (3, 3), (4, 2), (5, 4);
 
 INSERT INTO track_collection (track, collection)
-VALUES (1, 4), (2, 2), (3, 2), (4, 4), (5, 1), (6, 3);
+VALUES (1, 4), (2, 2), (3, 2), (4, 4), (5, 1), (6, 3), (7, 2);
