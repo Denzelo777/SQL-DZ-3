@@ -6,7 +6,7 @@ WHERE duration = (SELECT MAX(duration) FROM Track);
 
 SELECT track_name, duration
 FROM Track
-WHERE duration < '00:03:30';
+WHERE duration >= '00:03:30';
 
 SELECT collection_name, year_of_release
 FROM Collection
@@ -18,9 +18,9 @@ WHERE name_alias NOT LIKE '% %';
 
 SELECT track_name
 FROM Track
-WHERE track_name ILIKE 'мой%' OR track_name ILIKE 'my%' 
-OR track_name ILIKE '%мой' OR track_name ILIKE '%my'
-OR track_name ILIKE '%мой%' OR track_name ILIKE '%my%'
+WHERE track_name ILIKE 'мой %' OR track_name ILIKE 'my %' 
+OR track_name ILIKE '% мой' OR track_name ILIKE '% my'
+OR track_name ILIKE '% мой %' OR track_name ILIKE '% my %'
 OR track_name ILIKE 'мой' OR track_name ILIKE 'my';
 
 
